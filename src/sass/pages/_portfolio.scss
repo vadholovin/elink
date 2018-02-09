@@ -1,0 +1,40 @@
+// ========================================
+// PORTFOLIO SECTION
+// ========================================
+
+.portfolio {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: #ededed;
+
+  @media (min-width: 1024px) {
+    padding-top: 70px;
+  }
+}
+
+.portfolio-title {
+  margin-bottom: 50px;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+
+  @media (min-width: 481px) {
+    width: 50%;
+  }
+
+  @media (min-width: 961px) {
+    width: 25%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
