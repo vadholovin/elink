@@ -424,7 +424,10 @@
         </div>
       </footer>
 
+      
       <!-- MODAL CONTENT -->
+
+      <!-- Modal message box -->
       <div class="modal-box is-hidden">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -434,6 +437,7 @@
         </div>
       </div>
 
+      <!-- Modal form -->
       <div class="modal-form is-hidden">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -444,25 +448,279 @@
               <label for="name" class="contact-form__label">Ваше имя:</label>
               <input type="text" class="contact-form__field" name="user-name" id="user-name" placeholder="Имя...">
             </div>
-
             <div class="contact-form__container">
               <label for="phone" class="contact-form__label">Ваш телефон:</label>
               <input type="text" class="contact-form__field" name="user-phone" id="user-phone" placeholder="Телефон...">
             </div>
-
             <button type="submit" class="btn btn-warning">Отправить</button>
           </form>
           <div class="modal-content__close"></div>
         </div>
       </div>
+
+      <!-- Modal calculator -->
+      <div class="modal-calc calc is-hidden">
+        <div class="modal-background"></div>
+        <div class="calc-content">
+          <div class="container">
+            <h2 class="calc-title">Онлайн калькулятор</h2>
+      
+            <div class="calc-item">
+              <h3 class="calc-item__title">Штробление</h3>
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="strobingCable" class="calc-item__label">Под кабель:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="strobing-cabel" id="strobing-cable-brick" value="brick">
+                    <label for="strobing-cable-brick" class="calc-item__radio-label">кирпич/газобетон</label>
+      
+                    <input type="radio" name="strobing-cabel" id="strobing-cable-concrete" value="concrete" checked>
+                    <label for="strobing-cable-concrete" class="calc-item__radio-label">бетон</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="strobingCable" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="strobingBox" class="calc-item__label">Под коробку:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="strobing-box" id="strobing-box-brick" value="brick">
+                    <label for="strobing-box-brick" class="calc-item__radio-label">кирпич/газобетон</label>
+      
+                    <input type="radio" name="strobing-box" id="strobing-box-concrete" value="concrete" checked>
+                    <label for="strobing-box-concrete" class="calc-item__radio-label">бетон</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="strobingBox" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="strobingShield" class="calc-item__label">Под щит:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="strobing-shield" id="strobing-shield-brick" value="brick">
+                    <label for="strobing-shield-brick" class="calc-item__radio-label">кирпич/газобетон</label>
+      
+                    <input type="radio" name="strobing-shield" id="strobing-shield-concrete" value="concrete" checked>
+                    <label for="strobing-shield-concrete" class="calc-item__radio-label">бетон</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="strobingShield" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="strobingSocket" class="calc-item__label">Под розетку:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="strobing-socket" id="strobing-socket-brick" value="brick">
+                    <label for="strobing-socket-brick" class="calc-item__radio-label">кирпич/газобетон</label>
+      
+                    <input type="radio" name="strobing-socket" id="strobing-socket-concrete" value="concrete" checked>
+                    <label for="strobing-socket-concrete" class="calc-item__radio-label">бетон</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="strobingSocket" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="calc-item">
+              <h3 class="calc-item__title">Прокладка кабеля</h3>
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="cabelThin" class="calc-item__label">Сечение до 2,5 мм:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="cabel-thin" id="cabel-thin-gofr" value="gofr">
+                    <label for="cabel-thin-gofr" class="calc-item__radio-label">в гофре</label>
+      
+                    <input type="radio" name="cabel-thin" id="cabel-thin-gofroff" value="gofrOff" checked>
+                    <label for="cabel-thin-gofroff" class="calc-item__radio-label">без гофры</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="cabelThin" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="cabelWide" class="calc-item__label">Сечение от 4 мм:</label>
+                  <div class="calc-item__radio-box">
+                    <input type="radio" name="cabel-wide" id="cabel-wide-gofr" value="gofr">
+                    <label for="cabel-wide-gofr" class="calc-item__radio-label">в гофре</label>
+      
+                    <input type="radio" name="cabel-wide" id="cabel-wide-gofroff" value="gofrOff" checked>
+                    <label for="cabel-wide-gofroff" class="calc-item__radio-label">без гофры</label>
+                  </div>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="cabelWide" data-feature="various">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="calc-item">
+              <h3 class="calc-item__title">
+                Монтаж и подключение электротехнического оборудования
+              </h3>
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="installSocket" class="calc-item__label">Розетка:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installSocket">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installSwitch" class="calc-item__label">Выключатель:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installSwitch">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installDimmer" class="calc-item__label">Диммер:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installDimmer">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+              </ul>
+      
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="installBox" class="calc-item__label">Распред. коробка:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installBox">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installStabilizer" class="calc-item__label">Стабилизатор:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installStabilizer">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installSource" class="calc-item__label">Источник питания:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installSource">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="calc-item">
+              <h3 class="calc-item__title">Монтаж электрощита</h3>
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="installShieldOuter" class="calc-item__label">Щит накладной:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installShieldOuter">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installMeter220" class="calc-item__label">Электросчетчик 220В:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installMeter220">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installMeter380" class="calc-item__label">Электросчетчик 380В:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installMeter380">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+              </ul>
+      
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="installUzo2" class="calc-item__label">УЗО 2-полюсной:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installUzo2">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installUzo4" class="calc-item__label">УЗО 4-полюсной:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installUzo4">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="installShieldInner" class="calc-item__label">Щит внутренний:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="installShieldInner">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="calc-item">
+              <h3 class="calc-item__title">Малярные работы</h3>
+              <ul class="calc-item__features">
+                <li class="calc-item__feature">
+                  <label for="plaster" class="calc-item__label">Заштукатуривание штробы:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="plaster">
+                    <span class="calc-item__input-amount">метр</span>
+                  </div>
+                </li>
+      
+                <li class="calc-item__feature">
+                  <label for="plate" class="calc-item__label">Вмазка подрозетника:</label>
+                  <div class="calc-item__field-container">
+                    <input type="number" min="0" class="calc-item__input" id="plate">
+                    <span class="calc-item__input-amount">штук</span>
+                  </div>
+                </li>
+              </ul>  
+            </div>
+      
+            <div class="calc-result">
+              <span class="calc-result__title">Итог:</span>
+              <div class="calc-item__field-container">
+                <input type="text" class="calc-item__input" id="result" readonly>
+                <span class="calc-item__input-amount">руб.</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-warning" id="calculate">Рассчитать</button>
+            <a href="#contacts" class="btn btn-warning">оставить заявку</a>
+          </div>
+          <div class="modal-content__close"></div>
+        </div>
+      </div>
+
     </div><!-- .page end -->
 
     <script src="js/vendor/jquery.min.js"></script>
-    <script src="libs/pagescroll2id/PageScroll2id.min.js" defer></script>
-    <script src="libs/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+    <script src="libs/pagescroll2id/PageScroll2id.min.js"></script>
+    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="libs/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/feedback.js" defer></script>
-    <script src="js/feedback-call.js" defer></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/feedback-call.js"></script>
+    <script src="js/calc.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
