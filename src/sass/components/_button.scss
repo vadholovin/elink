@@ -32,8 +32,8 @@
   background-color: $brand-color;
 
   &:hover {
-    border-color: mix(black, $brand-color, 5%);
-    background-color: mix(black, $brand-color, 5%);
+    border-color: mix(black, $brand-color, 7%);
+    background-color: mix(black, $brand-color, 7%);
   }
 }
 
@@ -64,5 +64,16 @@
   &:hover {
     background-color: #fff;
     color: $brand-color;
+  }
+}
+
+.btn-danger {
+  color: #fff;
+  border-color: #fe6546;
+  background-color: #fe6546;
+
+  &:hover {
+    border-color: mix(black, #fe6546, 10%);
+    background-color: mix(black, #fe6546, 10%);
   }
 }

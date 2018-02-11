@@ -127,8 +127,34 @@ $(document).ready(function(){
   }
 })();
 
-$(document).ready(function() {
-  
-  $(".nav-item, .nav-list-hide__item, .to-id").mPageScroll2id();
+/* SHOW/HIDE MODAL CALCULATOR */
+(function() {
+  const modalCalc = document.querySelector('.modal-calc'),
+        background = document.querySelector('.modal-calc .modal-background'),
+        openBtn = document.querySelector('#calc-trigger'),
+        closeBtn1 = document.querySelector('.modal-calc .modal-content__close'),
+        closeBtn2 = document.querySelector('#calc-btn');
 
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modalCalc.classList.remove('is-hidden');
+  });
+
+  background.addEventListener('click', hideModalCalc);
+  closeBtn1.addEventListener('click', hideModalCalc);
+  closeBtn2.addEventListener('click', hideModalCalc);
+  window.addEventListener('keydown', function(e) {
+    if (e.keyCode === 27 && !modalCalc.classList.contains('is-hidden')) {
+      modalCalc.classList.add('is-hidden');
+    }
+  });
+
+  function hideModalCalc() {
+    modalCalc.classList.add('is-hidden');
+  }
+})();
+
+
+$(document).ready(function() {
+  $(".nav-item, .nav-list-hide__item, .to-id").mPageScroll2id();
 });
